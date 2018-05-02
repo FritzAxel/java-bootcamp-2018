@@ -1,4 +1,4 @@
-package BootCamp.PractiaDos;
+package BootCamp;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

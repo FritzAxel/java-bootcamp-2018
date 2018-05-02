@@ -1,4 +1,4 @@
-package BootCamp.PractiaDos;
+package BootCamp;
 
 /**
  * Hello world!
