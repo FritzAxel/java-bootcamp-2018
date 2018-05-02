@@ -2,12 +2,12 @@ package ConexionBD;
 
 public class dataBaseConnection {
 
-	private static dataBaseConnection singleton = null;
+	private static dataBaseConnection instance = null;
 	
 	public static dataBaseConnection getInstance() {
-		if(singleton == null)
-			singleton = new dataBaseConnection();
-		return singleton;
+		if(instance == null)
+			instance = new dataBaseConnection();
+		return instance;
 	}
 	
 
