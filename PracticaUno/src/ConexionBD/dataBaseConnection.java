@@ -2,6 +2,9 @@ package ConexionBD;
 
 public class dataBaseConnection {
 
+	
+	
+	
 	private static dataBaseConnection instance = null;
 	
 	public static dataBaseConnection getInstance() {
