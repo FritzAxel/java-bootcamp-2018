@@ -1,4 +1,6 @@
-package DBConexion;
+package Factory;
+
+import DBConexion.Connection;
 
 public interface ConnectionFactory {
 	

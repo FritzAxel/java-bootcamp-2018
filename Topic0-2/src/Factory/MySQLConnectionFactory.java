@@ -1,4 +1,7 @@
-package DBConexion;
+package Factory;
+
+import DBConexion.Connection;
+import DBConexion.MySQLConnection;
 
 public class MySQLConnectionFactory implements ConnectionFactory{
 
