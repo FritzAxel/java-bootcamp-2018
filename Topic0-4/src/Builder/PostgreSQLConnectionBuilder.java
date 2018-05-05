@@ -1,6 +1,6 @@
 package Builder;
 
-public class PostgreSQLConnectionBuilder extends DatabaseConnectionBuilder{
+public class PostgreSQLConnectionBuilder implements DatabaseConnectionBuilder{
 
 	@Override
 	public void getConnect() {

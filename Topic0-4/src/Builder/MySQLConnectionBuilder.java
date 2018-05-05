@@ -1,6 +1,6 @@
 package Builder;
 
-public class MySQLConnectionBuilder extends DatabaseConnectionBuilder{
+public class MySQLConnectionBuilder implements DatabaseConnectionBuilder{
 
 	@Override
 	public void getConnect() {

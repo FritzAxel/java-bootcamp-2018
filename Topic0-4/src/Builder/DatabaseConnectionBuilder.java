@@ -1,6 +1,6 @@
 package Builder;
 
-public abstract class DatabaseConnectionBuilder {
+public interface DatabaseConnectionBuilder {
 
 	public abstract void getConnect();
 	
