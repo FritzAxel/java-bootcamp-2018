@@ -11,8 +11,7 @@ public class ProxyDatabaseConnection implements DatabaseConnection{
 	
 	@Override
 	public void connect() {
-		// TODO Auto-generated method stub
-		
+		//get connect to a proxy database.		
 	}
 	
 }

@@ -8,7 +8,7 @@ public class RealDatabaseConnection implements DatabaseConnection{
 
 	@Override
 	public void connect() {
-		// TODO Auto-generated method stub
+		//get connect to the real database.
 		
 	}
 	
