@@ -9,6 +9,9 @@ public class ProxyDatabaseConnection implements DatabaseConnection{
 		this.dbC = databaseConnection;
 	}
 	
+	/**
+	 * This method simulate the connection to the database.
+	 */
 	@Override
 	public void connect() {
 		//get connect to a proxy database.		

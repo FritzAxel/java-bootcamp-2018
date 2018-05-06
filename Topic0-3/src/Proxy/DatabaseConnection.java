@@ -11,7 +11,7 @@ public interface DatabaseConnection {
 
 	
 	/**
-	 * This method is used to get connect to the database.
+	 * This method is used to simulate the connection to the database.
 	 */
 	public void connect();
 	
