@@ -1,5 +1,10 @@
 package Proxy;
 
+/**
+ * 
+ * @author Axel Fritz
+ *
+ */
 public class ProxyDatabaseConnection implements DatabaseConnection{
 
 	private RealDatabaseConnection dbC;
@@ -14,7 +19,7 @@ public class ProxyDatabaseConnection implements DatabaseConnection{
 	 */
 	@Override
 	public void connect() {
-		//get connect to a proxy database.		
+		dbC.connect();
 	}
 	
 }
