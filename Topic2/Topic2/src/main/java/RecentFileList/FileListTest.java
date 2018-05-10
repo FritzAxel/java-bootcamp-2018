@@ -9,6 +9,11 @@ import org.junit.Test;
 
 import junit.framework.TestCase;
 
+/**
+ * 
+ * @author Axel Fritz
+ *
+ */
 
 public class FileListTest {
 	
