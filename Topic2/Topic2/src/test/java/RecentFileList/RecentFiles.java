@@ -49,7 +49,14 @@ public class RecentFiles {
 			}else
 				fileList.add(fileName);
 		}
-			
+	}
+	
+	public static String getOldestFile() {
+		return fileList.get(MAXFILES);
+	}
+	
+	public static String getTop() {
+		return fileList.get(0);
 	}
 	
 }
