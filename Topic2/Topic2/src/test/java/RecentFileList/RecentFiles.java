@@ -27,7 +27,10 @@ public class RecentFiles {
 		this.fileList = new ArrayList<String>(MAXFILES);
 	}
 	
-	
+	/**
+	 * This method return the entire fileList.
+	 * @return ArrayList
+	 */
 	public static ArrayList getFileList() {
 		return fileList;
 	}
@@ -51,10 +54,18 @@ public class RecentFiles {
 		}
 	}
 	
+	/**
+	 * This method return the oldest recent file opened.
+	 * @return String
+	 */
 	public static String getOldestFile() {
 		return fileList.get(MAXFILES);
 	}
 	
+	/**
+	 * This method return the Top of the recent file list.
+	 * @return String
+	 */
 	public static String getTop() {
 		return fileList.get(0);
 	}
