@@ -1,5 +1,6 @@
 package Blog;
 
+import java.util.List;
 import java.util.ArrayList;
 
 /**
@@ -9,10 +10,10 @@ import java.util.ArrayList;
  */
 public class Blog {
 
-	private ArrayList<Entry> entriesList;
+	private List<Entry> entriesList;
 	
 	public Blog() {
-		entriesList = new ArrayList<Entry>();
+		entriesList = new ArrayList<>();
 	}
 	
 	/**
@@ -57,7 +58,7 @@ public class Blog {
 	 * This method return the entire list of entries.	
 	 * @return ArrayList.
 	 */
-	public ArrayList<Entry> getEntriesList(){
+	public List<Entry> getEntriesList(){
 		return entriesList;
 	}
 }

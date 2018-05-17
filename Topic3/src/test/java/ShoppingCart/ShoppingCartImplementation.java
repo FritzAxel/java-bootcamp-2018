@@ -1,6 +1,6 @@
 package ShoppingCart;
 
-import java.awt.List;
+import java.util.List;
 import java.util.ArrayList;
 /**
  * This class is the implementation of the {@link ShoppingCart} service.
@@ -9,7 +9,7 @@ import java.util.ArrayList;
  */
 public class ShoppingCartImplementation implements ShoppingCart{
 
-	private ArrayList<Item> items;
+	private List<Item> items;
 	
 	public ShoppingCartImplementation() {
 		items = new ArrayList<Item>();
@@ -39,17 +39,24 @@ public class ShoppingCartImplementation implements ShoppingCart{
 
 	
 	public String getInfoOfItemAtTheCart(String nameOfItem) {
-		// TODO Auto-generated method stub
-		return null;
+		String info = null;
+		for(Item i : items) {
+			if(i.getName().equals(nameOfItem))
+				info = i.toString();
+		}
+		return info;
 	}
 
-	public ArrayList<Item> getListOfItems() {
+	public List<Item> getListOfItems() {
 		return items;
 	}
 
 	public double getTotalPrice() {
-		// TODO Auto-generated method stub
-		return 0;
+		double total = 0;
+		for(Item i : items) {
+			total += i.calculateAmount();
+		}
+		return total;
 	}
 	
 	

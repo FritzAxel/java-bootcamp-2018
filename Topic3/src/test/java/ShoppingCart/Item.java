@@ -38,6 +38,13 @@ public class Item {
 		this.quantity = 0;
 	}
 
+	/**
+	 * This method return the amount.
+	 * @return
+	 */
+	public double calculateAmount() {
+		return this.price*this.quantity;
+	}
 	
 	@Override
 	public String toString() {
