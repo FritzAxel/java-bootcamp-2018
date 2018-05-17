@@ -25,8 +25,13 @@ public class ShoppingCartImplementation implements ShoppingCart{
 		}
 	}
 
-	public boolean removeItemOfCart(Item item) {
-		return this.items.remove(item);
+	public boolean removeItemOfCart(String idItem) {
+		boolean removed = false;
+		for(Item i: items) {
+			if(i.getId().equals(idItem))
+				removed = items.remove(i);
+		}
+		return removed;
 	}
 
 	public void updateQuantityOfItemAtTheCart(Item item, int quantity) {
@@ -58,6 +63,7 @@ public class ShoppingCartImplementation implements ShoppingCart{
 		}
 		return total;
 	}
+
 	
 	
 	

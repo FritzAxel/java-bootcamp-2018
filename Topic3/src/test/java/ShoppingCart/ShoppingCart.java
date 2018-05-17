@@ -20,7 +20,7 @@ public interface ShoppingCart {
 	 * @param item
 	 * @return true if the item was removed. false if the item was not removed.
 	 */
-	public boolean removeItemOfCart(Item item);
+	public boolean removeItemOfCart(String idItem);
 	
 	/**
 	 * This method update the quantity of items at the cart.
