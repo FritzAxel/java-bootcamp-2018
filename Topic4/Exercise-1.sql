@@ -36,7 +36,7 @@ CREATE TABLE `day` (
 
 CREATE TABLE `course_x_day` (
 	course_id INT NOT NULL,
-	day INT NOT NULL,
+	day_id INT NOT NULL,
 	start VARCHAR(5),
 	finish VARCHAR(5),
 	FOREIGN KEY (course_id) REFERENCES course(id),
