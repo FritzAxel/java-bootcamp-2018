@@ -15,7 +15,7 @@ public interface UserService {
 	/**
 	 * This method modifies an existing user.
 	 */
-	public void updateUser(String id, String name, String mail);
+	public void updateUser(Long id, String name, String mail);
 	
 	/**
 	 * This method delete an user.

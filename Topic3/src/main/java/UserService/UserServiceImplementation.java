@@ -26,7 +26,7 @@ public class UserServiceImplementation implements UserService{
 			userRepo.addNewUser(newUser);
 	}
 
-	public void updateUser(String userId, String name, String mail) {
+	public void updateUser(Long userId, String name, String mail) {
 		User u = null;
 		u = userRepo.getUserById(userId);
 		if(u != null) {
@@ -43,4 +43,5 @@ public class UserServiceImplementation implements UserService{
 	public String seeUser(User user) {
 		return userRepo.getUserById(user.getId()).toString();
 	}
+
 }

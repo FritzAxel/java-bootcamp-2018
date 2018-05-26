@@ -1,6 +1,9 @@
 package ShoppingCart;
 
 import java.util.List;
+
+import Item.Item;
+
 import java.util.ArrayList;
 /**
  * This class is the implementation of the {@link ShoppingCart} service.

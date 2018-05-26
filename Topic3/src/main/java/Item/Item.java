@@ -1,11 +1,11 @@
-package ShoppingCart;
+package Item;
 
 public class Item {
 
 	/**
 	 * Id of the item.
 	 */
-	private String id;
+	private Long id;
 	/**
 	 * Name of the item.
 	 */
@@ -25,13 +25,13 @@ public class Item {
 	
 	/**
 	 * Constructor of the class.
-	 * @param id
+	 * @param i
 	 * @param name
 	 * @param description
 	 * @param price
 	 */
-	public Item(String id, String name, String description, double price) {
-		this.id = id;
+	public Item(Long i, String name, String description, double price) {
+		this.id = i;
 		this.name = name;
 		this.description = description;
 		this.price = price;
@@ -61,14 +61,14 @@ public class Item {
 	/**
 	 * @return the id
 	 */
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
 
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

@@ -6,10 +6,12 @@ import static org.junit.Assert.assertTrue;
 import java.util.List;
 import org.junit.Test;
 
+import Item.Item;
+
 public class ShoppingCartTest {
 	
 	
-	Item item = new Item("01", "item1", "descripcion", 200);
+	Item item = new Item( 01, "item1", "descripcion", 200);
 	
 	@Test
 	public void whenAddAnItemToTheCart() {

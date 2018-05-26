@@ -49,13 +49,13 @@ public class UserRepository {
 	
 	/**
 	 * This method return the instance of the User found by id.
-	 * @param id
+	 * @param long1
 	 * @return User
 	 */
-	public User getUserById(String id) {
+	public User getUserById(Long long1) {
 		User user = null;
 		for(User u : usersList) {
-			if(u.getId().equals(id)) 
+			if(u.getId().equals(long1)) 
 				user = u;
 		}
 		return user;

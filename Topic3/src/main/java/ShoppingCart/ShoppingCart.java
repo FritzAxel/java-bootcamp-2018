@@ -2,6 +2,8 @@ package ShoppingCart;
 
 import java.awt.List;
 
+import Item.Item;
+
 /**
  * This interface represents a ShoppingCart service.
  * 
