@@ -13,14 +13,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import entity.ShoppingCart;
-import service.ShoppingCartService;
+import service.ShoppingCartServiceImplementation;
 
 @RestController
-@RequestMapping("/shoppingCart")
+@RequestMapping("/shoppingCarts")
 public class ShoppingCartController {
 	
 	@Autowired
-	private ShoppingCartService shopCartService;
+	private ShoppingCartServiceImplementation shopCartService;
 	
 	@PostMapping(value = "/add")
 	public Long addShoppingCart(@RequestBody ShoppingCart shoppingCart) {

@@ -13,14 +13,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import entity.User;
-import service.UserService;
+import service.UserServiceImplementation;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/users")
 public class UserController {
 
 	@Autowired
-	private UserService userService;
+	private UserServiceImplementation userService;
 	
 	@PostMapping(value = "/add")
 	public Long addUser(@RequestBody User user) {

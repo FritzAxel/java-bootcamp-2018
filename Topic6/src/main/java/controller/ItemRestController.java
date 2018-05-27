@@ -19,14 +19,14 @@ import org.springframework.web.bind.annotation.RestController;
 import entity.Item;
 import repository.ItemRepository;
 import repository.ShoppingCartRepository;
-import service.ItemService;
+import service.ItemServiceImplementation;
 
 @RestController
-@RequestMapping("/item")
+@RequestMapping("/items")
 public class ItemRestController {
 
 	@Autowired
-	ItemService itemService;
+	ItemServiceImplementation itemService;
 	
 	@PostMapping(value = "/add")
 	public void addItem(@RequestBody Item item) {
