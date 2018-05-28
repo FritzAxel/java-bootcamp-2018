@@ -51,4 +51,12 @@ public interface UserService {
 	 * @return
 	 */
 	public Collection<User> getAll();
+	/**
+	 * This method validate the login.
+	 * @param nickName
+	 * @param email
+	 * @param pw
+	 * @return true/false
+	 */
+	public boolean validatePassword(String nickName, String pw);
 }

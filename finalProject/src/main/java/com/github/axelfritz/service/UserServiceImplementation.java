@@ -48,7 +48,16 @@ public class UserServiceImplementation implements UserService{
 	public User getByNickName(String userNickName) {
 		return this.userRepo.findByNickName(userNickName);
 	}
-
+	
+	@Override
+	public boolean validatePassword(String nickName, String pw) {
+		User storedUser = userRepo.findByNickName(nickName);
+		if(storedUser.getPassword().equals(pw))
+			return true;
+		else
+			return false;
+	}
+	
 	@Override
 	public Collection<User> getAll() {
 		return (Collection<User>) this.userRepo.findAll();

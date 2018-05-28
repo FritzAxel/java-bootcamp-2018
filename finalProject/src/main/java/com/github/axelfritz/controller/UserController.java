@@ -26,14 +26,24 @@ public class UserController {
 	@Autowired
 	private UserServiceImplementation userService;
 	
-	@ApiOperation(value = "Add an user")
-	@PostMapping(value = "/add")
-	public ResponseEntity saveUser(@RequestBody User user) {
+	@ApiOperation(value = "register an user")
+	@PostMapping(value = "/register")
+	public ResponseEntity registerUser(@RequestBody User user) {
 		if(userService.add(user))
-			return new ResponseEntity("User saved succesfully", HttpStatus.OK);
+			return new ResponseEntity("User saved succesfully", HttpStatus.CREATED);
 		else
-			return new ResponseEntity("The user's nickname already exists.", HttpStatus.OK);
+			return new ResponseEntity("The user's nickname already exists.", HttpStatus.BAD_REQUEST);
 	}
+	
+	@ApiOperation(value = "Login")
+	@PostMapping(value = "/login")
+	public ResponseEntity login(@RequestBody User user) {
+		if(userService.validatePassword(user.getNickName(), user.getPassword()))
+			return new ResponseEntity("Login succesfully", HttpStatus.OK);
+		else 
+			return new ResponseEntity("Wrogn user or password", HttpStatus.FORBIDDEN);
+	}
+	
 	
 	@ApiOperation(value = "update an existing user")
 	@PutMapping(value = "/update")
@@ -44,9 +54,9 @@ public class UserController {
 			storedUser.setEmail(user.getEmail());
 			storedUser.setPassword(user.getPassword());
 			userService.add(storedUser);	
-			return new ResponseEntity("User updated succesfully", HttpStatus.OK);
+			return new ResponseEntity("User updated succesfully", HttpStatus.ACCEPTED);
 		}else
-			return new ResponseEntity("The user couldn't be found and update.", HttpStatus.OK);
+			return new ResponseEntity("The user couldn't be found and update.", HttpStatus.BAD_REQUEST);
 	}
 	
 	
