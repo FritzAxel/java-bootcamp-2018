@@ -1,4 +1,4 @@
-package controller;
+package com.github.axelfritz.controller;
 
 import java.util.Optional;
 
@@ -14,9 +14,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import entity.User;
+import com.github.axelfritz.entity.User;
+import com.github.axelfritz.service.UserServiceImplementation;
+
 import io.swagger.annotations.ApiOperation;
-import service.UserServiceImplementation;
 
 @RestController
 @RequestMapping("/users")
@@ -34,20 +35,20 @@ public class UserController {
 			return new ResponseEntity("The user's nickname already exists.", HttpStatus.OK);
 	}
 	
-	@ApiOperation(value = "Update an existing user")
-	@PutMapping(value = "/update/{nickName}")
-	public ResponseEntity updateUser(@PathVariable Long nickName,@RequestBody User user) {
-		User storedUser = userService.get(user.getNickName());
+	@ApiOperation(value = "update an existing user")
+	@PutMapping(value = "/update")
+	public ResponseEntity updateUser(@RequestBody User user) {
+		User storedUser = userService.getByNickName(user.getNickName());
 		if(storedUser != null) {
 			storedUser.setName(user.getName());
 			storedUser.setEmail(user.getEmail());
 			storedUser.setPassword(user.getPassword());
-			storedUser //shoppingCart
-			userService.add(user);	
+			userService.add(storedUser);	
 			return new ResponseEntity("User updated succesfully", HttpStatus.OK);
 		}else
 			return new ResponseEntity("The user couldn't be found and update.", HttpStatus.OK);
 	}
+	
 	
 	@ApiOperation(value = "Delete an existing user")
 	@DeleteMapping(value = "/delete/{id}")
@@ -56,12 +57,10 @@ public class UserController {
 		return new ResponseEntity("User deleted succesfully", HttpStatus.OK);
 	}
 	
-	@ApiOperation(value = "Search an User by Id")
+	@ApiOperation(value = "Search and show an User by Id")
 	@GetMapping(value = "/show/{id}")
 	public Optional<User> showUser(@PathVariable Long id) {
 		return userService.getById(id);
 	}
-	
-	
 	
 }
