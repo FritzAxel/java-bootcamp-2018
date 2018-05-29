@@ -18,10 +18,11 @@ public class ProductServiceImplementation implements ProductService{
 	@Override
 	public boolean add(Product product) {
 		if(this.productRepo.findByName(product.getName()) != null) {
+			return false;
+		}else {
 			productRepo.save(product);
 			return true;
-		}else
-			return false;
+		}
 	}
 
 	@Override

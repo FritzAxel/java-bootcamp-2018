@@ -62,6 +62,5 @@ public class UserServiceImplementation implements UserService{
 	public Collection<User> getAll() {
 		return (Collection<User>) this.userRepo.findAll();
 	}
-
 	
 }

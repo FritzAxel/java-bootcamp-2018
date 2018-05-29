@@ -1,9 +1,12 @@
 package com.github.axelfritz.entity;
 
+import java.util.Collection;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -29,6 +32,9 @@ public class User {
 	
 	@OneToOne
 	private Cart shoppingCart;
+	
+	@OneToMany
+	private Collection<Buy> purchases;
 
 	public User() {}
 	

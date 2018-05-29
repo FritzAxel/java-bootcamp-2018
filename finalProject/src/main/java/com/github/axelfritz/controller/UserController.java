@@ -44,7 +44,6 @@ public class UserController {
 			return new ResponseEntity("Wrogn user or password", HttpStatus.FORBIDDEN);
 	}
 	
-	
 	@ApiOperation(value = "update an existing user")
 	@PutMapping(value = "/update")
 	public ResponseEntity updateUser(@RequestBody User user) {
@@ -58,7 +57,6 @@ public class UserController {
 		}else
 			return new ResponseEntity("The user couldn't be found and update.", HttpStatus.BAD_REQUEST);
 	}
-	
 	
 	@ApiOperation(value = "Delete an existing user")
 	@DeleteMapping(value = "/delete/{id}")

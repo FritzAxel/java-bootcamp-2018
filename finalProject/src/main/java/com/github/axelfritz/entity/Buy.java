@@ -3,6 +3,7 @@ package com.github.axelfritz.entity;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -10,6 +11,9 @@ public class Buy {
 	
 	@Id @GeneratedValue
 	private Long id;
+	
+	@ManyToOne
+	private User user;
 	
 	@OneToOne
 	private Cart cart;

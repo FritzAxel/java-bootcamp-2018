@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.Optional;
 
 import com.github.axelfritz.entity.Cart;
+import com.github.axelfritz.entity.ProductInCart;
 
 /**
  * This interface represents the cart's service.
@@ -17,12 +18,12 @@ public interface CartService {
 	 * @param cart
 	 * @return
 	 */
-	public void add(Cart cart);
+	public boolean add(Cart cart);
 	/**
 	 * This method delete a saved cart.
 	 * @param id
 	 */
-	public void delete(Long id);
+	public boolean delete(Long id);
 	/**
 	 * This method get a saved Cart.
 	 * @param id
@@ -36,5 +37,6 @@ public interface CartService {
 	 */
 	public Collection<Cart> getAll();
 	
+	public void addProductToCart(Cart cart, ProductInCart product);
 	
 }
