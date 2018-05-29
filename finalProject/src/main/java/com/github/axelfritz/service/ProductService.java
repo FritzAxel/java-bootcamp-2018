@@ -43,4 +43,10 @@ public interface ProductService {
 	 * @return
 	 */
 	public Collection<Product> getAll();
+	/**
+	 * This method get all the products that belong to a category.
+	 * @param category
+	 * @return Collection<Product>
+	 */
+	public Collection<Product> filterByCategory(String category);
 }

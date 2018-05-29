@@ -49,4 +49,9 @@ public class ProductServiceImplementation implements ProductService{
 		return (Collection<Product>) this.productRepo.findAll();
 	}
 
+	@Override
+	public Collection<Product> filterByCategory(String category) {
+		return this.productRepo.findByCategory(category);
+	}
+
 }

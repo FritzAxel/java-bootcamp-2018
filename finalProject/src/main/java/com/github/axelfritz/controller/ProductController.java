@@ -1,5 +1,6 @@
 package com.github.axelfritz.controller;
 
+import java.util.Collection;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,6 +60,12 @@ public class ProductController {
 	@GetMapping(value = "/show/{id}")
 	public Optional<Product> showProduct(@PathVariable Long id) {
 		return productService.getById(id);
+	}
+	
+	@ApiOperation(value = "Filter by category")
+	@GetMapping(value = "/show/{category}")
+	public Collection<Product> filterByCategory(@PathVariable String category){
+		return this.productService.filterByCategory(category);
 	}
 	
 }
