@@ -33,7 +33,7 @@ public class ApplicationConfig extends WebSecurityConfigurerAdapter {
 	}
 
 	private ApiInfo getApiInfo() {  
-		Contact contact = new Contact("Axel Fritz", "axel.fritz95@gmail.com");  
+		Contact contact = new Contact("Axel Fritz", null, "axel.fritz95@gmail.com");  
 		return new ApiInfoBuilder()  
 				.title("Final Project")  
 				.contact(contact)  
